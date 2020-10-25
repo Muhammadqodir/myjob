@@ -1,0 +1,41 @@
+.item_image{
+	width: 100%;
+	margin: auto;
+}
+
+.round_rect{
+	border-radius: 5px;
+}
+
+.circle{
+	border-radius: 10000px;
+}
+
+.add_font{
+	font-family: myfont;
+}
+
+.item_date{
+	position: absolute; 
+	top: 0px; 
+	right: 15px; 
+	color: #26262699; 
+	text-align: right; 
+	font-family: myfont_light;
+}
+
+.item_title{
+	color: #262626;
+	font-family: myfont;
+	margin-right: 100px;
+}
+
+.item_description{
+	color: #262626;
+	font-family: myfont_light;
+	margin-bottom: 8px;
+}
+
+.pointer_cursor{
+	cursor: pointer;
+}

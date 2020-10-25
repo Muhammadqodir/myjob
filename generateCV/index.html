@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyJOB</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/3a96fafdff.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="../style/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../style/styles.css">
+	<link rel="stylesheet" type="text/css" href="../listAdapters/style/style.css">
+	
+</head>
+<body style="font-family: myfont" class="noselect">
+	<div class="header">
+		<div style="background: #F8F9FA;">
+			<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<a href="../index.html" style="text-decoration: none;"><div class="backButton"><i class="fas fa-chevron-left"></i> Назад</div></a>
+				</div>
+				<div class="col-4" style="text-align: center; padding: 10px;">
+					<img src="../res/illustrations/logo.png" height="40">
+				</div>
+				<div class="col-4">
+					<div class="backButton" style="text-align: right;"><i class="fas fa-sign-in-alt"></i> Войти</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div style="background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7875525210084033) 44%, rgba(255,255,255,1) 82%); height: 30px;"></div>
+	</div>
+
+	<nav class="navigation" id="mainNav">
+		<a href="#0">
+			<div class="navigation__link active">
+				Личная информация
+			</div>
+		</a>
+		<a href="#1">
+			<div class="navigation__link active">
+				Пожелания
+			</div>
+		</a>
+		<a href="#2">
+			<div class="navigation__link">
+				Образование
+			</div>
+		</a>
+		<a href="#3">
+			<div class="navigation__link">
+				Опыт работы
+			</div>
+		</a>
+		<a href="#4">
+			<div class="navigation__link">
+				Навыки и умения
+			</div>
+		</a>
+		<a href="#5">
+			<div class="navigation__link">
+				Достижения
+			</div>
+		</a>
+		<a href="#6">
+			<div class="navigation__link">
+				Интересы и хобби
+			</div>
+		</a>
+		<a href="#7">
+			<div class="navigation__link">
+				Доп. информация
+			</div>
+		</a>
+	</nav>
+
+	<div class="pages" style="font-family: myfont_light;">
+		<div class="row" style="width: 100%;">
+			<div class="col-9" style="min-height: 500px;">
+
+				<div class="page-section" id="0">
+					<div class="row">
+						<div class="col-3">
+							<div style="width: 100%">
+								<img style="width: 100%; border-radius: 50px;" src="../res/illustrations/user.jpg">
+								<div class="editPic">
+									<img src="../res/icons/edit.svg" style="width: 100%;">
+								</div>
+							</div>
+						</div>
+						<div class="col-9">
+							<h5 style="font-family: myfont">Личная информация</h5> 
+							<div class="row">
+								<div class="col-md-6">
+									<div class="formControl" style="margin-top: 10px;">
+										<label for="name">Ф.И.О. <span class="necessarly">*</span></label>
+										<input type="" placeholder="Иванов Иван Иванович" id="name" name="name">
+									</div>
+								</div>
+								<div class="col-md-6" style="padding-left: 0px;">
+									<div class="formControl" style="margin-top: 10px;">
+										<label for="burnDate">Дата рождения <span class="necessarly">*</span></label>
+										<input type="" id="burnDate" placeholder="06.08.2001" maxlength="10">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="formControl">
+										<label for="city">Адрес <span class="necessarly">*</span></label>
+										<input type="" placeholder="Ставрополь" id="city">
+									</div>
+								</div>
+								<div class="col-md-6" style="padding-left: 0px;">
+									<div class="formControl">
+										<label for="sex">Пол <span class="necessarly">*</span></label>
+										<select id="sex">
+											<option>Мужской</option>
+											<option>Женский</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="formControl">
+										<label for="family">Семейное положение <span class="necessarly">*</span></label>
+										<select id="family">
+											<option>Холост / Незамужем</option>
+											<option>Женат / Замкжем</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-6" style="padding-left: 0px;">
+									<div class="formControl">
+										<label for="cityzenship">Гражданство <span class="necessarly">*</span></label>
+										<input type="" id="cityzenship" placeholder="" maxlength="10">
+									</div>
+								</div>
+							</div>
+							<hr>
+
+							<h5 style="font-family: myfont">Контакты</h5> 
+							<div class="row">
+								<div class="col-md-6">
+									<div class="formControl" style="margin-top: 10px;">
+										<label for="phoneNum">Номер телефона <span class="necessarly">*</span></label>
+										<input type="" maxlength="10" placeholder="+79682659013" id="phoneNum" name="name">
+									</div>
+								</div>
+								<div class="col-md-6" style="padding-left: 0px;">
+									<div class="formControl" style="margin-top: 10px;">
+										<label for="secondPhoneNum">Email</label>
+										<input id="secondPhoneNum" placeholder="example@example.com" >
+									</div>
+								</div>
+							</div>
+							<div class="row" style="margin-top: 20px;">
+								<div class="col-6">
+									 <h5 style="font-family: myfont">Альтернативный способ связи</h5> 
+								</div>
+								<div class="col-6" style="text-align: right;">
+									 <h5 style="font-family: myfont_light; padding: 0px; color: #5A308C;" class="backButton" onclick="addAltContactRow()">Добавить</h5> 
+								</div>
+							</div>
+							<div id="altContacts">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="page-section" id="1">
+					<hr>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="formControl" style="margin-top: 10px;">
+								<label for="position">Желаемая должность <span class="necessarly">*</span></label>
+								<select id="position">
+									<option>водитель с опытом работы</option>
+									<option>менеджер проектов</option>
+									<option>Работа для студентов</option>
+									<option>бухгалтер производства</option>
+									<option>менеджер по маркетингу</option>
+									<option>Менеджер по ВЭД</option>
+									<option>hr менеджер</option>
+									<option>IT специалист</option>
+									<option>Сетевой администратор</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6" style="padding-left: 0px;">
+							<div class="formControl" style="margin-top: 10px;">
+								<label for="proArea">Профессиональная область <span class="necessarly">*</span></label>
+								<select id="proArea">
+									<option>Архитектура, строительство, дизайн</option>
+									<option>Банки, инвестиции, кредит</option>
+									<option>Временная работа, Фриланс, Работа на дому</option>
+									<option>Гостинично - ресторанный бизнес</option>
+									<option>Государственная служба</option>
+									<option>Государственная служба</option>
+									<option>Топ менеджмент</option>
+									<option>Торговля, Продажи</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-6">
+							<div class="formControl">
+								<label for="salary">Желаемая зарплата <span class="necessarly">*</span></label>
+								<input id="salary" placeholder="50 000" >
+							</div>
+						</div>
+						<div class="col-md-6" style="padding-left: 0px;">
+							<div class="formControl" style="padding-top: 40px;">
+
+								<div class="custom-control custom-checkbox mr-sm-2">
+							        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+							        <label class="custom-control-label" for="customControlAutosizing">По договоренности</label>
+						      	</div>
+								
+							</div>
+						</div>
+					</div>
+
+					<div class="formControl" style="max-width: 100000px;">
+						<label for="salary">Тип занятости <span class="necessarly">*</span></label>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="custom-control custom-checkbox mr-sm-2">
+							    <input type="checkbox" class="custom-control-input" id="chekFullDay">
+							    <label class="custom-control-label" for="chekFullDay">Полный рабочий день</label>
+						    </div>
+							<div style="margin-top: 10px;" class="custom-control custom-checkbox mr-sm-2">
+							    <input type="checkbox" class="custom-control-input" id="chekNotFullDay">
+							    <label class="custom-control-label" for="chekNotFullDay">Неполный рабочий день</label>
+						    </div>
+							<div style="margin-top: 10px;" class="custom-control custom-checkbox mr-sm-2">
+							    <input type="checkbox" class="custom-control-input" id="chekRemoteWork">
+							    <label class="custom-control-label" for="chekRemoteWork">Удаленная работа (фриланс)</label>
+						    </div>
+						</div>
+						<div class="col-md-6" style="padding-left: 0px;">
+							<div class="custom-control custom-checkbox mr-sm-2">
+							    <input type="checkbox" class="custom-control-input" id="chekChange">
+							    <label class="custom-control-label" for="chekChange">Посменный график</label>
+						    </div>
+							<div style="margin-top: 10px;" class="custom-control custom-checkbox mr-sm-2">
+							    <input type="checkbox" class="custom-control-input" id="chekTemporary">
+							    <label class="custom-control-label" for="chekTemporary">Временная работа</label>
+						    </div>
+						</div>
+					</div>
+
+					<div class="formControl" style="max-width: 100000px;">
+						<label for="salary">Переезд и командировки <span class="necessarly">*</span></label>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="custom-control custom-checkbox mr-sm-2">
+							    <input type="checkbox" class="custom-control-input" id="chekBTrip">
+							    <label class="custom-control-label" for="chekBTrip">Готов к командировкам</label>
+						    </div>
+						</div>
+						<div class="col-md-6" style="padding-left: 0px;">
+							<div class="custom-control custom-checkbox mr-sm-2">
+							    <input type="checkbox" class="custom-control-input" id="chekMoving">
+							    <label class="custom-control-label" for="chekMoving">Готов к переезду</label>
+						    </div>
+						</div>
+					</div>
+				</div>
+
+				<div class="page-section" id="2">
+					<hr>
+					<h5 style="font-family: myfont">Образование</h5>
+					<div id="educationItems">
+						<div class="card" id="education0" style="padding: 15px;">
+							<div class="row">
+								<div class="col-6">
+									<div class="formControl" style="margin-top: 5px;">
+										<label for="eduLevel">Уровень образования <span class="necessarly">*</span></label>
+										<select id="eduLevel">
+											<option>Среднее</option>
+											<option>Непольное среднее</option>
+											<option>Средне-специальное</option>
+											<option>Незаконченное высшее</option>
+											<option>Высшее</option>
+											<option>Ученая степень</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-6" style="padding-left: 0px;">
+									<div class="formControl" style="margin-top: 5px;">
+										<label for="eduName">Учебное заведение <span class="necessarly">*</span></label>
+										<input id="eduName" placeholder="" >
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="formControl">
+										<label for="eduFaculty">Факультет <span class="necessarly">*</span></label>
+										<input id="eduFaculty" placeholder="" >
+									</div>
+								</div>
+								<div class="col-6" style="padding-left: 0px;">
+									<div class="formControl">
+										<label for="eduSpeciality">Специальность <span class="necessarly">*</span></label>
+										<input id="eduSpeciality" placeholder="" >
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="formControl">
+										<label for="eduStart">Начало обучения <span class="necessarly">*</span></label>
+										<input class=".date_mask" id="eduStart" maxlength="10" placeholder="01.08.2001" >
+									</div>
+								</div>
+								<div class="col-6" style="padding-left: 0px;">
+									<div class="formControl">
+										<label for="eduEnd">Окончание обучения <span class="necessarly">*</span></label>
+										<input class=".date_mask" id="eduEnd" maxlength="10" placeholder="01.08.2001" >
+									</div>
+									<div style="margin-top: 20px;" class="custom-control formControl custom-checkbox mr-sm-2">
+									    <input type="checkbox" class="custom-control-input" id="chekEduNowDays">
+									    <label class="custom-control-label" for="chekEduNowDays">Учусь в данный момент</label>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h5 style="margin: auto; text-align: center; font-family: myfont_light; padding: 0px; margin-top: 20px; color: #5A308C;" class="backButton" onclick="addAltContactRow()">Добавить образование</h5>
+
+					<hr>
+					<h5 style="font-family: myfont">Дополнительное образование</h5>
+					<div id="educationItems">
+						<div class="card" id="education0" style="padding: 15px;">
+							<div class="row">
+								<div class="col-6">
+									<div class="formControl" style="margin-top: 5px;">
+										<label for="eduName">Учебное заведение <span class="necessarly">*</span></label>
+										<input id="eduName" placeholder="" >
+									</div>
+								</div>
+								<div class="col-6" style="padding-left: 0px;">
+									<div class="formControl" style="margin-top: 5px;">
+										<label for="eduSpeciality">Специальность <span class="necessarly">*</span></label>
+										<input id="eduSpeciality" placeholder="" >
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="formControl">
+										<label for="eduStart">Начало обучения <span class="necessarly">*</span></label>
+										<input class=".date_mask" id="eduStart" maxlength="10" placeholder="01.08.2001" >
+									</div>
+								</div>
+								<div class="col-6" style="padding-left: 0px;">
+									<div class="formControl">
+										<label for="eduEnd">Окончание обучения <span class="necessarly">*</span></label>
+										<input class=".date_mask" id="eduEnd" maxlength="10" placeholder="01.08.2001" >
+									</div>
+									<div style="margin-top: 20px;" class="custom-control formControl custom-checkbox mr-sm-2">
+									    <input type="checkbox" class="custom-control-input" id="chekEduNowDays">
+									    <label class="custom-control-label" for="chekEduNowDays">Учусь в данный момент</label>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h5 style="margin: auto; text-align: center; font-family: myfont_light; padding: 0px; margin-top: 20px; color: #5A308C;" class="backButton" onclick="addAltContactRow()">Добавить дополнительное образование</h5>
+
+				</div>
+				<!-- <div class="page-section" id="3">
+					<h1>First</h1>
+				</div> -->
+				<div class="page-section" id="3">
+
+					<hr>
+					<h5 style="font-family: myfont">Опыт работы</h5>
+					<div id="experienceItems">
+						<div class="card" id="education0" style="padding: 15px;">
+							<div class="row">
+								<div class="col-6">
+									<div class="formControl" style="margin-top: 5px;">
+										<label for="companyName">Компания <span class="necessarly">*</span></label>
+										<input id="companyName" placeholder="" >
+									</div>
+								</div>
+								<div class="col-6" style="padding-left: 0px;">
+									<div class="formControl" style="margin-top: 5px;">
+										<label for="spere">Сфера <span class="necessarly">*</span></label>
+										<input id="spere" placeholder="" >
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="formControl" style="margin-top: 5px;">
+										<label for="position">Должность <span class="necessarly">*</span></label>
+										<input id="position" placeholder="" >
+									</div>
+								</div>
+								<div class="col-6" style="padding-left: 0px;">
+									<div class="formControl" style="margin-top: 5px;">
+										<label for="country">Страна, город <span class="necessarly">*</span></label>
+										<input id="country" placeholder="" >
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="formControl">
+										<label for="expStart">Начало работы <span class="necessarly">*</span></label>
+										<input class=".date_mask" id="expStart" maxlength="10" placeholder="01.08.2001" >
+									</div>
+								</div>
+								<div class="col-6" style="padding-left: 0px;">
+									<div class="formControl">
+										<label for="expEnd">Начало работы <span class="necessarly">*</span></label>
+										<input class=".date_mask" id="expEnd" maxlength="10" placeholder="01.08.2001" >
+									</div>
+									<div style="margin-top: 20px;" class="custom-control formControl custom-checkbox mr-sm-2">
+									    <input type="checkbox" class="custom-control-input" id="chekExpNowDays">
+									    <label class="custom-control-label" for="chekExpNowDays">Работаю в данный момент</label>
+								    </div>
+								</div>
+								<div class="col-12">
+									<div class="formControl" style="max-width: 10000px;">
+										<label for="duties">Обязанности <span class="necessarly">*</span></label></label>
+										<textarea id="duties"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h5 style="margin: auto; text-align: center; font-family: myfont_light; padding: 0px; margin-top: 20px; color: #5A308C;" class="backButton" onclick="addAltContactRow()">Добавить опыт работы</h5>
+				</div>
+
+				<div class="page-section" id="4">
+					<hr>
+					<h5 style="font-family: myfont">Навыки и умения</h5>
+					<div id="langItems">
+						<div class="row" id="langItem0">
+							<div class="col-6">
+								<div class="formControl" style="margin-top: 5px;">
+									<label for="eduName">Язык <span class="necessarly">*</span></label>
+									<input id="eduName" placeholder="" >
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="formControl" style="margin-top: 5px;">
+									<label for="eduLevel">Уровень владения <span class="necessarly">*</span></label>
+									<select id="eduLevel">
+										<option>Начальный</option>
+										<option>Средний</option>
+										<option>Хороший</option>
+										<option>Свободное владение</option>
+										<option>Высшее</option>
+										<option>Ученая степень</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h5 style="margin: auto; text-align: center; font-family: myfont_light; padding: 0px; margin-top: 20px; color: #5A308C;" class="backButton" onclick="addAltContactRow()">Добавить язык</h5>
+					<hr>
+					<div class="formControl" style="max-width: 10000px;">
+						<label for="duties">Дополнительные навыки <span class="necessarly">*</span></label></label>
+						<div class="row">
+							<div class="col-9" style="padding-right: 0px;">
+								<div class="formControl" style="max-width: 10000px; margin-top: 5px;">
+									<input id="skill" name="skill" style="border-top-right-radius: 0px; border-bottom-right-radius: 0px;">
+								</div>
+							</div>
+							<div class="col-3" style="padding-left: 0px;">
+								<button onclick="addSkill()" id="btnAddSkill" style="margin-top: 5px; height: 40px; border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Добавить</button>
+							</div>
+						</div>
+						<div id="skillsList" style="margin-top: 10px;">
+							
+						</div>
+					</div>
+					<h5 style="font-family: myfont; margin-top: 20px;">Водительские права</h5>
+					<div class="row">
+						<div class="col-1">
+							<div style="margin-top: 10px;" class="custom-control formControl custom-checkbox mr-sm-2">
+							    <input type="checkbox" class="custom-control-input" id="driverLitA">
+							    <label class="custom-control-label" for="driverLitA">A</label>
+							</div>
+						</div>
+						<div class="col-1">
+							<div style="margin-top: 10px;" class="custom-control formControl custom-checkbox mr-sm-2">
+							    <input type="checkbox" class="custom-control-input" id="driverLitB">
+							    <label class="custom-control-label" for="driverLitB">B</label>
+							</div>
+						</div>
+						<div class="col-1">
+							<div style="margin-top: 10px;" class="custom-control formControl custom-checkbox mr-sm-2">
+							    <input type="checkbox" class="custom-control-input" id="driverLitC">
+							    <label class="custom-control-label" for="driverLitC">C</label>
+							</div>
+						</div>
+						<div class="col-1">
+							<div style="margin-top: 10px;" class="custom-control formControl custom-checkbox mr-sm-2">
+							    <input type="checkbox" class="custom-control-input" id="driverLitD">
+							    <label class="custom-control-label" for="driverLitD">D</label>
+							</div>
+						</div>
+						<div class="col-1">
+							<div style="margin-top: 10px;" class="custom-control formControl custom-checkbox mr-sm-2">
+							    <input type="checkbox" class="custom-control-input" id="driverLitE">
+							    <label class="custom-control-label" for="driverLitE">E</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-section" id="5">
+
+					<hr>
+					<h5 style="font-family: myfont">Достижения</h5>
+					<div id="echieventsItems">
+						<div class="card" id="echievent0" style="padding: 15px;">
+							<div class="row">
+								<div class="col-6">
+									<div class="formControl" style="margin-top: 5px;">
+										<label for="country">Страна <span class="">*</span></label>
+										<input id="country" placeholder="" >
+									</div>
+								</div>
+								<div class="col-6" style="padding-left: 0px;">
+									<div class="formControl" style="margin-top: 5px;">
+										<label for="year">Год <span class="necessarly">*</span></label>
+										<input id="year" placeholder="" >
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="formControl" style="max-width: 10000px;">
+										<label for="duties">О мероприятии <span class="necessarly">*</span></label></label>
+										<textarea id="duties"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h5 style="margin: auto; text-align: center; font-family: myfont_light; padding: 0px; margin-top: 20px; color: #5A308C;" class="backButton" onclick="addAltContactRow()">Добавить опыт работы</h5>
+				</div>
+				<div class="page-section" id="6">
+					<hr>
+					<h5 style="font-family: myfont">Интересы и хобби</h5>
+					<div class="formControl" style="max-width: 10000px;margin-top: 10px;">
+					<textarea style="height: 50px;" id="duties"></textarea>
+					</div>
+				</div>
+				<div class="page-section" id="7">
+					<hr>
+					<h5 style="font-family: myfont">Доп. информация</h5>
+					<div class="formControl" style="max-width: 10000px;margin-top: 10px;">
+					<textarea style="height: 50px;" id="duties"></textarea>
+					</div>
+				</div>
+				<div style="width: 100%; text-align: center;">
+					<button class="btnColor" style="max-width: 200px; margin: auto;">Создать</button>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<a href=""><img src="../res/illustrations/logo.png" height="50"></a>
+					<br>
+					Информационный портал по поиску работы для студентов и размещения вакансий от работодателей<br>
+					<img src="../res/illustrations/xakaton.png" class="round_rect" height="40" style="margin-top: 15px;">
+				</div>
+				<div class="col-lg-5">
+					<div class="titleBC">Мобильное приложение:</div>
+				</div>
+				<div class="col-lg-3" style="text-align: left;">
+					<div class="titleBC"><i class="fas fa-link"></i> Полезные ссылки:</div>
+					<a href="">Обратная связь</a><br>
+					<a href="">Каталог компании</a>
+					<div style="margin-top: 10px;">
+						<div class="titleBC">Контакты:</div>
+					 	<i class="fas fa-phone"></i> +7(968)265-90-13<br>
+					 	<i class="fas fa-at"></i> m.qodir777@gmail.com<br>
+					 	<a href="https://t.me/M_Qodir" target="_blank" class="socialIcon"><i class="fab fa-telegram"></i></a>
+					 	<a href="https://www.instagram.com/mq_abduvoitov/" target="_blank" class="socialIcon"><i class="fab fa-instagram"></i></a>
+					 	<a href="https://www.facebook.com/profile.php?id=100013390786200" target="_blank" class="socialIcon"><i class="fab fa-facebook"></i></a>
+					 	<a href="https://github.com/Mqodir" target="_blank" class="socialIcon"><i class="fab fa-github"></i></a>
+					 	<a href="https://vk.com/mqodir" target="_blank" class="socialIcon"><i class="fab fa-vk"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="font-family: myfont_light; text-align: center;">
+			Разработана командой "New Line Solutions" 2020 Copyright ©
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="../js/utils.js"></script>
+	<script src="../listAdapters/scripts.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="../js/date_mask.js"></script>
+	<script src="../js/dynamicForms.js"></script>
+	<script type="text/javascript">
+		switchTab("tab_1");
+		sideNav();
+		dateInputMask(document.getElementById('burnDate'));
+		phoneInputMask(document.getElementById('phoneNum'));
+		dateInputMask(document.getElementById('eduEnd'));
+		dateInputMask(document.getElementById('eduStart'));
+		initSkillBtn();
+	</script>
+</body>
+</html>

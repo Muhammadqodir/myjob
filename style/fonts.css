@@ -1,0 +1,19 @@
+@font-face {
+  font-family: myfont;
+  src: url(../res/fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+  font-family: myfont_bold;
+  src: url(../res/fonts/Rubik-Bold.ttf);
+}
+
+@font-face {
+  font-family: myfont_light;
+  src: url(../res/fonts/Rubik-Light.ttf);
+}
+
+@font-face {
+  font-family: pacifico;
+  src: url(../res/fonts/Pacifico-Regular.ttf);
+}
