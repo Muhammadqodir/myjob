@@ -8,12 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="style/fonts.css">
 	<link rel="stylesheet" type="text/css" href="style/styles.css">
 	<link rel="stylesheet" type="text/css" href="listAdapters/style/style.css">
+	<link rel="stylesheet" type="text/css" href="jmaps/jquery-jvectormap-2.0.5.css">
 </head>
 <body style="font-family: myfont" class="noselect">
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container">
-			  <a class="navbar-brand title_logo" href="#"><span id="title_my" style="font-family: pacifico; color: #5A308C;">my</span><span style="font-family: myfont_bold; color: #5A308C;">JOB</span></a>
+			  <a class="navbar-brand title_logo" href="#"><span id="title_my" style="font-family: pacifico; color: #003974;">работа </span><span style="font-family: myfont_bold; color: #003974;">СКФО</span></a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
@@ -31,10 +32,10 @@
 			    </ul>
 			    <ul class="navbar-nav my-2 my-lg-0">
 			      <li class="nav-item">
-			        <a class="nav-link" style="color: #5A308C;" href="reg/">+ Создать резюме</a>
+			        <a class="nav-link" style="color: #003974;" href="reg/">+ Создать резюме</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" style="color: #5A308C;" href="regOrg/">+ Создать вакансию</a>
+			        <a class="nav-link" style="color: #003974;" href="regOrg/">+ Создать вакансию</a>
 			      </li>
 			    </ul>
 			  </div>
@@ -85,31 +86,31 @@
 				<div class="divider_abs"></div>
 				<div class="company"><i class="far fa-building"></i> HR Capital Cunsulting</div>
 				<div class="position">HR менеджер</div>
-				<i class="fas fa-arrow-right go" style="color: #5A308C; position: absolute; right: 18px; bottom: 18px;"></i>
+				<i class="fas fa-arrow-right go" style="color: #003974; position: absolute; right: 18px; bottom: 18px;"></i>
 			</div>
 			<div class="col-md-3 popular_v">
 				<div class="divider_abs"></div>
 				<div class="company"><i class="far fa-building"></i> HR Capital Cunsulting</div>
 				<div class="position">HR менеджер</div>
-				<i class="fas fa-arrow-right go" style="color: #5A308C; position: absolute; right: 18px; bottom: 18px;"></i>
+				<i class="fas fa-arrow-right go" style="color: #003974; position: absolute; right: 18px; bottom: 18px;"></i>
 			</div>
 			<div class="col-md-3 popular_v">
 				<div class="divider_abs"></div>
 				<div class="company"><i class="far fa-building"></i> HR Capital Ткацкая фабрика</div>
 				<div class="position">Директор(CEO) ткацкой фабрики</div>
-				<i class="fas fa-arrow-right go" style="color: #5A308C; position: absolute; right: 18px; bottom: 18px;"></i>
+				<i class="fas fa-arrow-right go" style="color: #003974; position: absolute; right: 18px; bottom: 18px;"></i>
 			</div>
 			<div class="col-md-3 popular_v">
 				<div class="divider_abs"></div>
 				<div class="company"><i class="far fa-building"></i> HR Capital Cunsulting</div>
 				<div class="position">HR менеджер</div>
-				<i class="fas fa-arrow-right go" style="color: #5A308C; position: absolute; right: 18px; bottom: 18px;"></i>
+				<i class="fas fa-arrow-right go" style="color: #003974; position: absolute; right: 18px; bottom: 18px;"></i>
 			</div>
 		</div>
 		<!-- New vacansies & specialists -->
 		<div class="row" style="margin-top: 24px;">
 			<div class="col-3">
-				<h5><i class="fas fa-search" style="color: #5A308C"></i> Поиск по сфере</h5>
+				<h5><i class="fas fa-search" style="color: #003974"></i> Поиск по сфере</h5>
 				<div class="spere_list">
 					<span>Архитектура</span>
 					<span>Строительство</span>
@@ -135,13 +136,13 @@
 	<div class="footer" id="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4">
-					<a href="#"><img src="res/illustrations/logo.png" height="50"></a>
+				<div class="col-lg-4" style="text-align: center;">
+					<a href="#"><img src="res/illustrations/consortium.svg" height="150"></a>
 					<br>
 					Информационный портал по поиску работы для студентов и размещения вакансий от работодателей<br>
 				</div>
 				<div class="col-lg-5" style="text-align: center;">
-					<img src="res/illustrations/consortium.svg" class="round_rect" height="180" style="margin: auto;">
+					<!-- <img src="res/illustrations/consortium.svg" class="round_rect" height="180" style="margin: auto;"> -->
 				</div>
 				<div class="col-lg-3" style="text-align: left;">
 					<div class="titleBC"><i class="fas fa-link"></i> Полезные ссылки:</div>
@@ -167,6 +168,7 @@
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="jmaps/jquery-jvectormap-2.0.5.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="js/utils.js"></script>

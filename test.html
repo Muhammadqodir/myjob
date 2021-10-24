@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="jmaps/jquery-jvectormap-2.0.5.css">
+</head>
+<body>
+
+Test
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript" src="jmaps/jquery-jvectormap-2.0.5.min.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+          $.getJSON('jvm/data.json', function(data){
+            new jvm.Map({
+              map: 'fr_regions_merc',
+              container: $('#map2007'),
+              series: {
+                regions: [{
+                  scale: {
+                    '1': '#4169E1',
+                    '2': '#FF69B4'
+                  },
+                  attribute: 'fill',
+                  values: data['year2007'].results
+                }]
+              }
+            });
+
+            new jvm.Map({
+              map: 'fr_regions_merc',
+              container: $('#map2012'),
+              series: {
+                regions: [{
+                  scale: {
+                    '1': '#FF69B4',
+                    '2': '#4169E1'
+                  },
+                  attribute: 'fill',
+                  values: data['year2012'].results
+                }]
+              }
+            });
+          });
+        });
+    </script>
+</body>
+</html>
