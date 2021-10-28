@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>РаботаСКФО</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/3a96fafdff.js" crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../style/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../style/styles.css">
+	<link rel="stylesheet" type="text/css" href="../listAdapters/style/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css" integrity="sha512-C7hOmCgGzihKXzyPU/z4nv97W0d9bv4ALuuEbSf6hm93myico9qa0hv4dODThvCsqQUmKmLcJmlpRmCaApr83g==" crossorigin="anonymous" />
+</head>
+<body style="font-family: myfont" class="noselect">
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			  <a class="navbar-brand title_logo" href="#"><span id="title_my" style="font-family: pacifico; color: #003974;">работа </span><span style="font-family: myfont_bold; color: #003974;">СКФО</span></a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+			      <li class="nav-item active menu_item">
+			        <a class="nav-link" href="#">Статистика <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item menu_item">
+			        <a class="nav-link" href="#">Резюме</a>
+			      </li>
+			      <li class="nav-item menu_item">
+			        <a class="nav-link" href="#">Вакансии</a>
+			      </li>
+			      <li class="nav-item menu_item">
+			        <a class="nav-link" href="#">Каталог компании</a>
+			      </li>
+			    </ul>
+			    <ul class="navbar-nav my-2 my-lg-0">
+			      <li class="nav-item">
+			        <a class="nav-link" style="color: #003974;" href="#">
+			      	СКФУ <img class="circle" style="height: 40px; margin-left: 5px; border: solid 2px #003974;" src="https://upload.wikimedia.org/wikipedia/ru/2/2e/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%A1%D0%9A%D0%A4%D0%A3.png"></a>
+			      </li>
+			    </ul>
+			  </div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row" style="margin-top: 50px;">
+			<div class="col-9">
+				<h5 style="font-weight: bold;">Статистика</h5>
+				<div id="tabs" style="margin-top: 20px;">
+					<span class="tab_selector_active" style="font-size: 16px;" id="tab_1">Общее</span>  <span class="tab_selector" style="margin-left: 5px; font-size: 16px;" id="tab_3">Студенты</span>  <span class="tab_selector" style="margin-left: 5px; font-size: 16px;" id="tab_3">Поиск</span></div>
+				
+				<div class="row" style="margin-top: 30px;">
+					<div class="col-12" style="padding-top: 8px;">
+						ОБШАЯ СТАТИСТИКА<br>
+						<div class="row" style="margin-top: 10px;">
+							<div class="col-3">
+								<div class="s_card">
+									<span style="font-size: 30px;">20 000</span><br>
+									<span style="font-size: 16px;">Пользователей</span>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="s_card">
+									<span style="font-size: 30px;">300</span><br>
+									<span style="font-size: 16px;">Активных вакансии</span>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="s_card">
+									<span style="font-size: 30px;">3 000</span><br>
+									<span style="font-size: 16px;">Резюме</span>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="s_card">
+									<span style="font-size: 30px;">120</span><br>
+									<span style="font-size: 16px;">Компании</span>
+								</div>
+							</div>
+						</div>
+						<h5 style="margin-top: 20px;">Трафик</h5>
+						<div class="row" style="margin-top: 20px;">
+							<div class="col-12">
+								<div class="s_card">
+									<canvas id="myChart" height="100"></canvas>
+								</div>
+							</div>
+						</div>
+						<div id="tab_content" style="padding-top: 20px;"><br>
+							<img src="../res/illustrations/statistic.svg" width="100%"> 
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-3">
+				<h5 style="margin-top: 100px;">Пользователи</h5>
+				<div class="s_card" style="margin-top: 20px;">
+					<canvas id="myChartPie" height="370">	</canvas>
+				</div>
+				<div class="s_card" style="margin-top: 20px;">
+					<span style="font-size: 30px;">30 000</span><br>
+					<span style="font-size: 16px;">Запросы поиска</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer" id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<a href="#"><img src="../res/illustrations/logo.png" height="50"></a>
+					<br>
+					Информационный портал по поиску работы для студентов и размещения вакансий от работодателей<br>
+					<img src="../res/illustrations/xakaton.png" class="round_rect" height="40" style="margin-top: 15px;">
+				</div>
+				<div class="col-lg-5">
+					<div class="titleBC">Мобильное приложение:</div>
+				</div>
+				<div class="col-lg-3" style="text-align: left;">
+					<div class="titleBC"><i class="fas fa-link"></i> Полезные ссылки:</div>
+					<a href="#">Обратная связь</a><br>
+					<a href="#">Каталог компании</a>
+					<div style="margin-top: 10px;">
+						<div class="titleBC">Контакты:</div>
+					 	<i class="fas fa-phone"></i> +7(968)265-90-13<br>
+					 	<i class="fas fa-at"></i> m.qodir777@gmail.com<br>
+					 	<a href="https://t.me/M_Qodir" target="_blank" class="socialIcon"><i class="fab fa-telegram"></i></a>
+					 	<a href="https://www.instagram.com/mq_abduvoitov/" target="_blank" class="socialIcon"><i class="fab fa-instagram"></i></a>
+					 	<a href="https://www.facebook.com/profile.php?id=100013390786200" target="_blank" class="socialIcon"><i class="fab fa-facebook"></i></a>
+					 	<a href="https://github.com/Mqodir" target="_blank" class="socialIcon"><i class="fab fa-github"></i></a>
+					 	<a href="https://vk.com/mqodir" target="_blank" class="socialIcon"><i class="fab fa-vk"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="font-family: myfont_light; text-align: center;">
+			Разработана командой "New Line Solutions" 2020 Copyright ©
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="../js/utils.js"></script>
+	<script src="../listAdapters/scripts.js"></script>
+	<script type="text/javascript">
+	</script>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js" integrity="sha512-zO8oeHCxetPn1Hd9PdDleg5Tw1bAaP0YmNvPY8CwcRyUk7d7/+nyElmFrB6f7vg4f7Fv4sui1mcep8RIEShczg==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw==" crossorigin="anonymous"></script>
+
+
+	<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['20.10', '21.10', '22.10', '23.10', '24.10', '25.10'],
+        datasets: [{
+            label: 'Трафик',
+            data: [12, 19, 15, 35, 25, 30],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+var ctx1 = document.getElementById('myChartPie').getContext('2d');
+var data = {
+    labels: ['Вакансии','Резюме','Компании'],
+      datasets: [
+        {
+            fill: true,
+            backgroundColor: [
+                '#BF211E',
+                '#69A197',
+                '#E9CE2C'],
+            data: [25,45,30]
+        }
+    ]
+};
+
+new Chart(ctx1, {
+    type: "pie",
+    data: data
+});
+
+</script>
+</body>
+</html>
