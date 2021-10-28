@@ -11,25 +11,25 @@
 
 .title_logo{
 	font-family: myfont_bold;
-	color: #5A308C;
+	color: #003974;
 }
 
 .menu_item:hover{
-	border-bottom: solid 2px #5A308C;
+	border-bottom: solid 2px #003974;
 	transition: .2s;
 }
 
 .menu_item:not(:hover){
-	border-bottom: solid 2px #5A308C00;
+	border-bottom: solid 2px #00397400;
 	transition: .2s;
 }
 
 .btn_text:hover{
-	color: #5A308C88;
+	color: #00397488;
 }
 
 .btn_text:not(:hover){
-	color: #5A308C;
+	color: #003974;
 }
 
 html {
@@ -70,9 +70,9 @@ html {
 }
 
 .btn_search{
-	background: #5A308C;
+	background: #003974;
 	cursor: pointer;
-	border: solid 1px #5A308C;
+	border: solid 1px #003974;
 	color: #fff;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
@@ -84,9 +84,9 @@ html {
 }
 
 .btn_search:not(:hover){
-	background: #5A308C;
+	background: #003974;
 	cursor: pointer;
-	border: solid 1px #5A308C;
+	border: solid 1px #003974;
 	color: #fff;
 	transition: 0.8s;
 	opacity: 1;
@@ -182,7 +182,7 @@ html {
 	overflow: hidden;
 	display: -webkit-box;
 	font-size: 18px;
-	color: #5A308C;
+	color: #003974;
 	text-overflow: ellipsis;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
@@ -209,12 +209,12 @@ html {
 }
 
 .spere_list span:hover{
-	background-color: #5A308C;
+	background-color: #003974;
 	border-radius: 15px;
 	color: #fff;
 	font-family: myfont_light;
 	margin-right: 8px;
-	border: solid 1px #5A308C;
+	border: solid 1px #003974;
 	padding-left: 8px;
 	padding-right: 8px;
 	cursor: pointer;
@@ -245,21 +245,20 @@ html {
 .tab_selector_active{
 	font-size: 20px;
 	margin-right: 12px;
-	color: #5A308C;
+	color: #003974;
 	opacity: 1;
-	border-bottom: solid 2px #5A308C;
+	border-bottom: solid 2px #003974;
 	cursor: pointer;
 }
 
 .footer{
 	background: #EEF1F6;
-	margin-top: 24px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
 .titleBC{
-	color: #5A308C; 
+	color: #003974; 
 	font-weight: bold;
 }
 
@@ -271,7 +270,7 @@ html {
 }
 
 .socialIcon:hover{
-	color: #5A308C;
+	color: #003974;
 	font-size: 30px;
 	transition: .5s;
 	margin-right: 8px;
@@ -300,7 +299,7 @@ html {
 .backButton:hover{
 	padding: 18px;
 	cursor: pointer;
-	color: #5A308C;
+	color: #003974;
 	transition: .5s;
 }
 
@@ -383,9 +382,9 @@ html {
 	width: 100%;
 	outline: none;
 	padding: 8px;
-	border: solid 1px #5A308C;
+	border: solid 1px #003974;
 	border-radius: 5px;
-	background: #5A308C;
+	background: #003974;
 	color: #ffffff;
 	cursor: pointer;
 	transition: .3s;
@@ -406,10 +405,10 @@ html {
 	width: 100%;
 	outline: none;
 	padding: 8px;
-	border: solid 1px #5A308C;
+	border: solid 1px #003974;
 	border-radius: 5px;
 	background-color: #ffffff;
-	color: #5A308C;
+	color: #003974;
 	cursor: pointer;
 	transition: .3s;
 }
@@ -420,7 +419,7 @@ html {
 	padding: 8px;
 	border: solid 1px #262626;
 	border-radius: 5px;
-	background-color: #5A308C;
+	background-color: #003974;
 	color: #ffffff;
 	cursor: pointer;
 	transition: .3s;
@@ -503,7 +502,7 @@ html {
 }
 
 .navigation .active{
-	border-left: solid 2px #5A308C;
+	border-left: solid 2px #003974;
 	transition: .0s;
 }
 
@@ -536,7 +535,7 @@ html {
 }
 
 .skill{
-	background-color: #5A308C;
+	background-color: #003974;
 	color: #fff;
 	border-radius: 50px;
 	margin-right: 5px;
@@ -568,7 +567,7 @@ html {
 	right: 0px;
 	padding: 8px;
 	border-radius: 50%;
-	background: #5A308C;
+	background: #003974;
 	box-shadow: 0px 2px 5px 1px #cccccc;
 	cursor: pointer;
 	transition: .5s;
@@ -582,7 +581,7 @@ html {
 	right: 0px;
 	padding: 8px;
 	border-radius: 50%;
-	background: #5A308CCC;
+	background: #003974CC;
 	box-shadow: 0px 2px 5px 1px #595959;
 	cursor: pointer;
 	transition: .5s;
@@ -592,4 +591,46 @@ html {
 	font-family: myfont; 
 	margin-top: 18px; 
 	padding: 0px;
+}
+
+.item_image{
+	width: 100%;
+	margin: auto;
+}
+
+.round_rect{
+	border-radius: 5px;
+}
+
+.circle{
+	border-radius: 10000px;
+}
+
+.add_font{
+	font-family: myfont;
+}
+
+.item_date{
+	position: absolute; 
+	top: 0px; 
+	right: 15px; 
+	color: #26262699; 
+	text-align: right; 
+	font-family: myfont_light;
+}
+
+.item_title{
+	color: #262626;
+	font-family: myfont;
+	margin-right: 100px;
+}
+
+.item_description{
+	color: #262626;
+	font-family: myfont_light;
+	margin-bottom: 8px;
+}
+
+.pointer_cursor{
+	cursor: pointer;
 }
