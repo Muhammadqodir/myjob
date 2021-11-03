@@ -248,9 +248,9 @@ function myFunction() {
 }
 
 	document.addEventListener('scroll', function(e) {
-	  lastKnownScrollPosition = -(window.scrollY/2);
-	  console.log(lastKnownScrollPosition)
-	  $(".paralaxParent").css("top", lastKnownScrollPosition+"px")
+		console.log(e)
+	  yPos = -(window.scrollY/2);
+	  $(".paralaxParent").css("top", yPos+"px")
 	});
 function getSVs() {
 	clearTabContent();
