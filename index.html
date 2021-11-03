@@ -13,11 +13,11 @@
 </head>
 <body style="font-family: myfont" class="noselect">
 
-	<div style="z-index: -1; position: fixed; background: url('res/elbrus.jpg'); background-size: cover;  width: 100%; height: 100vh;">
+	<div class="paralaxParent" style="z-index: -1; position: fixed; background: url('res/elbrus.jpg'); background-size: cover;  width: 100%; height: 100vh;">
 		<div class="paralax" style="opacity: 0; width: 100%; height: 100%; background-color: #003974;"></div>
 	</div>
 
-	<nav style="opacity: .9" class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav style="opacity: .9; position: fixed; width: 100%; text-align: center; z-index: 9999999;" class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container">
 			  <a class="navbar-brand title_logo" href="#"><span id="title_my" style="font-family: pacifico; color: #003974;">работа </span><span style="font-family: myfont_bold; color: #003974;">СКФО</span></a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -247,6 +247,11 @@ function myFunction() {
 	addTabContent("<div class=\"row\" style=\"margin-top: 18px;\"> 		<div class=\"col-12\"> 			<div class=\"card\"> 				<div class=\"card-body\"> 					<div class=\"row\"> 						<div class=\"col-2\"> 							<img src=\"https://image.winudf.com/v2/image1/Y29tLm15dW5pdGVsLmFjdGl2aXRpZXNfaWNvbl8xNTUyNDA3OTA3XzA2OQ/icon.png?w=&fakeurl=1\" class=\"item_image round_rect\"> 						</div> 						<div class=\"col-10\"> 							<div class=\"item_title\">Электромонтер по ремонту и обслуживанию электрооборудования</div> 							<div class=\"item_date\">21 окт. 2020</div> 							<div class=\"item_description\">- Ведение нескольких участков бухгалтерского учета. <br>- Анализ. <br>- Работа с первичной документацией.</div> 							<div class=\"row bottom_data\"> 								<div class=\"col-4\"> 									<i class=\"far fa-building\"></i> СКФУ 								</div> 								<div class=\"col-4\"> 									<i class=\"fas fa-map-marker\"></i> Ставрополь 								</div> 								<div class=\"col-4\"> 									<i class=\"fas fa-money-bill-wave\"></i> 15 000 ₽ - 25 000₽ 								</div> 							</div> 						</div> 					</div> 			  	</div> 			</div> 		</div> 	</div>")
 }
 
+	document.addEventListener('scroll', function(e) {
+	  lastKnownScrollPosition = -(window.scrollY/2);
+	  console.log(lastKnownScrollPosition)
+	  $(".paralaxParent").css("top", lastKnownScrollPosition+"px")
+	});
 function getSVs() {
 	clearTabContent();
 	addTabContent(" 	<div class=\"row\" style=\"margin-top: 18px;\"> 		<div class=\"col-lg-6\" style=\"margin-top: 18px;\"> 			<div class=\"card pointer_cursor\"> 				<div class=\"card-body\"> 					<div class=\"row\"> 						<div class=\"col-4\"> 							<img src=\"https://www.eaclinic.co.uk/wp-content/uploads/2019/01/woman-face-eyes-1000x1000.jpg\" class=\"item_image circle\"> 						</div> 						<div class=\"col-8\"> 							<div class=\"item_title\">HR менеджер</div> 							<div class=\"item_date\">25 лет</div> 							<div class=\"item_description\"> 								- Опыт работы: 6 лет<br> 								- Город: Ставрополь<br> 								- Курс: 4 курс(выпускник)<br> 								- Направление подготовки: Информационные мимтемы и технологии<br> 							</div> 						</div> 					</div> 			  	</div> 			</div> 		</div> 		<div class=\"col-lg-6\" style=\"margin-top: 18px;\"> 			<div class=\"card pointer_cursor\"> 				<div class=\"card-body\"> 					<div class=\"row\"> 						<div class=\"col-4\"> 							<img src=\"https://www.eaclinic.co.uk/wp-content/uploads/2019/01/woman-face-eyes-1000x1000.jpg\" class=\"item_image circle\"> 						</div> 						<div class=\"col-8\"> 							<div class=\"item_title\">HR менеджер</div> 							<div class=\"item_date\">25 лет</div> 							<div class=\"item_description\"> 								- Опыт работы: 6 лет<br> 								- Город: Ставрополь<br> 								- Курс: 4 курс(выпускник)<br> 								- Направление подготовки: Информационные мимтемы и технологии<br> 							</div> 						</div> 					</div> 			  	</div> 			</div> 		</div> 	</div>");
